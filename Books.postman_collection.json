@@ -1,0 +1,157 @@
+{
+	"info": {
+		"_postman_id": "b9fee8fe-6118-4814-890b-6daab81eb11d",
+		"name": "Books",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "All Books",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/v1/books",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search Book By ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/v1/books/6169afed7ac8f0645378a047",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"books",
+						"6169afed7ac8f0645378a047"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "search by author and year",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/v1/books/authorYear/Tolstoy, Leo/1865",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"books",
+						"authorYear",
+						"Tolstoy, Leo",
+						"1865"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add New Book",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"id\": \"6169afed7ac8f0645378a047\",\r\n        \"title\": \"Northanger Abbey\",\r\n        \"author\": \"Austen, Jane\",\r\n        \"year_written\": 1814,\r\n        \"edition\": \"Penguin\",\r\n        \"price\": 18.2\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/v1/books/addNewBook",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"books",
+						"addNewBook"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update book",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"id\": \"6169afed7ac8f0645378a047\",\r\n        \"title\": \"Northanger Abbey\",\r\n        \"author\": \"Austen, Jane\",\r\n        \"year_written\": 1900,\r\n        \"edition\": \"Penguin\",\r\n        \"price\": 18.2\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/v1/books//update/6169afed7ac8f0645378a047",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"books",
+						"",
+						"update",
+						"6169afed7ac8f0645378a047"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get Books by rating",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/v1/books/rating/5",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"books",
+						"rating",
+						"5"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
